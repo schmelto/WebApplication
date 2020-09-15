@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 public class PaymentDetail
 {
     [Key]
-public int PMId { get; set; }
+    public int PMId { get; set; }
 
     [Required]
     [Column(TypeName = "nvarchar(100)")]
