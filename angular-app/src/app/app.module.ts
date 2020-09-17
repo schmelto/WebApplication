@@ -22,7 +22,7 @@ import { MaterialModule } from './material-module'; // all Material-Modules
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    MaterialModule
+    // MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
