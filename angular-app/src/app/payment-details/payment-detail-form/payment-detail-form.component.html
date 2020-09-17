@@ -1,39 +1,41 @@
-<!-- <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+<mat-card>
+
+<form #form="ngForm" class="form" autocomplete="off" (submit)="onSubmit(form)">
     <input type="hidden" name="PMId" [value]="service.formData.PMId">
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="full-width">
       <mat-label>CARD OWNER NAME</mat-label>
       <input matInput name="CardOwnerName" #CardOwnerName="ngModel" [(ngModel)]="service.formData.CardOwnerName"
             placeholder="Full Name" required
             [class.invalid]="CardOwnerName.invalid && CardOwnerName.touched">
     </mat-form-field>
   
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="full-width">
       <mat-label>CARD NUMBER</mat-label>
       <input matInput name="CardNumber" #CardNumber="ngModel" [(ngModel)]="service.formData.CardNumber"
             placeholder="16 Digit Card Number" required
             maxlength="16" minlength="16" [class.invalid]="CardNumber.invalid && CardNumber.touched">
     </mat-form-field>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="full-width">
         <mat-label>CVV</mat-label>
         <input matInput type="password" name="CVV" #CVV="ngModel" [(ngModel)]="service.formData.CVV"
                 placeholder="CVV" required maxlength="3" minlength="3"
                 [class.invalid]="CVV.invalid && CVV.touched">
       </mat-form-field>
 
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="full-width">
         <mat-label>AVALID THROUGH</mat-label>
-        <input name="ExpirationDate" #ExpirationDate="ngModel" [(ngModel)]="service.formData.ExpirationDate"
+        <input matInput name="ExpirationDate" #ExpirationDate="ngModel" [(ngModel)]="service.formData.ExpirationDate"
                 placeholder="MM/YY" required maxlength="5" minlength="5"
                 [class.invalid]="ExpirationDate.invalid && ExpirationDate.touched">
       </mat-form-field>
-      <mat-form-field class="example-full-width">
-      <button type="submit" [disabled]="form.invalid">SUBMIT</button>
-    </mat-form-field>
-</form> -->
+     
+      <button mat-raised-button type="submit" [disabled]="form.invalid">SUBMIT</button>
+</form>
+</mat-card>
   
 
-
+<!-- 
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
     <input type="hidden" name="PMId" [value]="service.formData.PMId">
     <div class="form-group">
@@ -67,4 +69,4 @@
         <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
     </div>
 </form>
-
+ -->
