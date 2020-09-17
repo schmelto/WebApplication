@@ -21,5 +21,6 @@ Add Angular Project.
 **Today's Progress**:
 Add the Angular frontend to the project.
 Struggled with Angular-Material. Check this tomorrow (new branch for that).
+Have to think about some grid system...
 
 **Link to work:** https://github.com/schmelto/WebApplication/commit/b9730d0912d5597beeaeef0b2495d259d0669224
