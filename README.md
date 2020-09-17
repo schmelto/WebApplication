@@ -6,10 +6,16 @@ Angular CRUD Application with ASP.NET Core Web API
 
 ### WebApplication
 
+```
 ILS Express
+```
 
 https://localhost:44390/
 
 ### AngularApp
 
+```
+ng serve --o
+```
 
+http://localhost:4200/
