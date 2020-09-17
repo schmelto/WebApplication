@@ -14,7 +14,7 @@ export class PaymentDetailService {
     PMId: null
   };
   
-  readonly rootURL = 'http://localhost:44390/api';
+  readonly rootURL = 'https://localhost:44390/api';
   list : PaymentDetail[];
 
   constructor(private http: HttpClient) { }
