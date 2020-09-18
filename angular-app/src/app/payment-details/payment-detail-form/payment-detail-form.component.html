@@ -17,7 +17,7 @@
     </mat-form-field>
 
     <mat-form-field class="full-width">
-        <mat-label>CVV</mat-label>
+        <mat-label>CVV - Type in to continue</mat-label>
         <input matInput type="password" name="CVV" #CVV="ngModel" [(ngModel)]="service.formData.CVV"
                 placeholder="CVV" required maxlength="3" minlength="3"
                 [class.invalid]="CVV.invalid && CVV.touched">
