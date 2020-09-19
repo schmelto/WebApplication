@@ -9,8 +9,6 @@ export interface PeriodicElement {
   Delete: string;
 }
 
-
-
 @Component({
   selector: 'app-payment-details',
   templateUrl: './payment-details.component.html',
@@ -19,25 +17,14 @@ export interface PeriodicElement {
 
 export class PaymentDetailsComponent implements OnInit {
 
-list$ = [];
-
   constructor(public service: PaymentDetailService) { }
-
-  ELEMENT_DATA: PaymentDetail[] = null;
-  displayedColumns: string[] = ['CardOwnerName', 'CardNumber', 'ExpirationDate', 'Delete'];
-  dataSource = this.ELEMENT_DATA;
-
+  
   ngOnInit() {
     this.service.refreshList();
-    this.list$ = this.service.getList();
-    console.log(this.list$)
-    
   }
-
 
   populateForm(selectedRecord) {
     this.service.formData = Object.assign({}, selectedRecord);
-    console.log(this.service.list);
   }
 
   onDelete(PMId) {

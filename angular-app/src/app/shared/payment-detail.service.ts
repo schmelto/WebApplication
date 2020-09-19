@@ -16,6 +16,7 @@ export class PaymentDetailService {
   
   readonly rootURL = 'https://localhost:44390/api';
   list : PaymentDetail[];
+  list1 : PaymentDetail[];
 
   constructor(private http: HttpClient) { }
 
@@ -33,10 +34,5 @@ export class PaymentDetailService {
     this.http.get(this.rootURL + '/PaymentDetail')
     .toPromise()
     .then(res => this.list = res as PaymentDetail[]);
-  }
-
-  getList() {
-    console.log(this.list);
-    return this.list;
   }
 }
