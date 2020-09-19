@@ -34,4 +34,9 @@ export class PaymentDetailService {
     .toPromise()
     .then(res => this.list = res as PaymentDetail[]);
   }
+
+  getList() {
+    console.log(this.list);
+    return this.list;
+  }
 }
