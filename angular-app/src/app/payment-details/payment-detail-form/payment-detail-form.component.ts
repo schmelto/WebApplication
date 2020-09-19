@@ -5,7 +5,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-payment-detail-form',
   templateUrl: './payment-detail-form.component.html',
-  styles: []
+  styleUrls: ['./payment-detail-form.component.scss']
 })
 export class PaymentDetailFormComponent implements OnInit {
 

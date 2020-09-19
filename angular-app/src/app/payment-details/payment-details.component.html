@@ -3,33 +3,65 @@
 
     <div class="row">
         <div class="col-md-5">
+            <h3>Payment Details</h3>
             <app-payment-detail-form></app-payment-detail-form>
         </div>
         <div class="col-md-7">
-            <div>table with list of records from the table</div>
+            <h3>Table with list of records from the table</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Card Owner</th>
+                        <th>Card Number</th>
+                        <th>Exp.</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let pd of service.list">
+                    <td (click)="populateForm(pd)">{{pd.CardOwnerName}}</td>
+                    <td (click)="populateForm(pd)">{{pd.CardNumber}}</td>
+                    <td (click)="populateForm(pd)">{{pd.ExpirationDate}}</td>
+                    <td>
+                        <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.PMId)">Delete</i>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
 
 
-<table class="table">
-    <thead class="thead-light">
-        <tr>
-            <th>Card Owner</th>
-            <th>Card Number</th>
-            <th>Exp.</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tr *ngFor="let pd of service.list">
-        <td (click)="populateForm(pd)">{{pd.CardOwnerName}}</td>
-        <td (click)="populateForm(pd)">{{pd.CardNumber}}</td>
-        <td (click)="populateForm(pd)">{{pd.ExpirationDate}}</td>
-        <td>
-            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.PMId)"></i>
-        </td>
-        <td>
-            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.PMId)">Delete</i>
-        </td>
-    </tr>
-</table>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="CardOwnerName">
+      <th mat-header-cell *matHeaderCellDef> CardOwnerName </th>
+      <td mat-cell *matCellDef="let element"> {{element.CardOwnerName}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="CardNumber">
+      <th mat-header-cell *matHeaderCellDef> CardNumber </th>
+      <td mat-cell *matCellDef="let element"> {{element.CardNumber}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="ExpirationDate">
+      <th mat-header-cell *matHeaderCellDef> ExpirationDate </th>
+      <td mat-cell *matCellDef="let element"> {{element.ExpirationDate}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Delete">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let element"> {{element.Delete}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+

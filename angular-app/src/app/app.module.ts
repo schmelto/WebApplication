@@ -8,6 +8,7 @@ import { PaymentDetailsComponent } from './payment-details/payment-details.compo
 import { PaymentDetailFormComponent } from './payment-details/payment-detail-form/payment-detail-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material-module'; // all Material-Modules
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
