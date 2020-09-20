@@ -22,7 +22,9 @@
                     <td (click)="populateForm(pd)">{{pd.CardNumber}}</td>
                     <td (click)="populateForm(pd)">{{pd.ExpirationDate}}</td>
                     <td>
-                        <i class="courser" (click)="onDelete(pd.PMId)">Delete</i>
+                        <span class="material-icons courser" (click)="onDelete(pd.PMId)">
+                            delete_outline
+                            </span>
                     </td>
                 </tr>
             </table>
