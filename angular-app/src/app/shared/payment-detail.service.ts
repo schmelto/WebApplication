@@ -16,7 +16,6 @@ export class PaymentDetailService {
   
   readonly rootURL = 'https://localhost:44390/api';
   list : PaymentDetail[];
-  list1 : PaymentDetail[];
 
   constructor(private http: HttpClient) { }
 
