@@ -7,7 +7,7 @@ Payment-Details will be stored into a SQL-Server
 
 ## Start
 
-`npm install`
+Download all files of this repository. Run the command `npm install`
 
 To run the application go into Visual Studio and run `ILS Express`.
 
