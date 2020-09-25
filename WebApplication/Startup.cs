@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebApplication.Models;
+using System.Reflection;
+using System.IO;
 using Microsoft.OpenApi.Models;
 
 namespace WebApplication
